@@ -9,7 +9,7 @@
   .bg-theme-2 {
     background-color: #f7ece1;
   }
-  .bg-theme-4{
+  .bg-theme-4 {
     background-color: #da7d4a;
   }
   .primary-gradient {
@@ -21,26 +21,25 @@
   .text-secondary {
     color: #94a3b8;
   }
-  .title-gradient{
+  .title-gradient {
     background: linear-gradient(to right, #e5793b 0%, #ff4185 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .wrap{
+  .wrap {
     width: 100%;
     padding: 104px 88px;
   }
-
-  .date{
-    color: #94A3B8;
+  .date {
+    color: #94a3b8;
     font-size: 14px;
   }
-  .event-title{
+  .components-title {
     font-size: 20px;
     font-weight: 700;
     color: #334155;
   }
-  .event-info{
+  .event-info {
     font-size: 16px;
     font-weight: 400;
     color: #334155;

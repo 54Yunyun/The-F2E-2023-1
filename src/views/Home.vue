@@ -1,7 +1,8 @@
 <script setup>
-import { events } from '@/constants/events.js'
-
-
+import Event from '@/components/Event.vue';
+import Issues from '@/components/Issues.vue';
+import Other from '@/components/Other.vue';
+import Footer from '@/components/Footer.vue';
 </script>
 <template>
   <!-- 首屏 候選人slogan、照片 -->
@@ -83,63 +84,21 @@ import { events } from '@/constants/events.js'
   </div>
   <!-- 最新活動 -->
   <div class="events-wrap wrap">
-    <div class="events-content flex flex-col">
-      <div class="events-text flex justify-center">
-        <div class="text-center m-3">
-          <span class="rounded-lg bg-slate-700 text-white font-bold p-3"
-            >LATEST EVENTS</span
-          >
-          <div class="title-gradient font-ManTouSans m-10 text-5xl xl:text-7xl">
-            最新活動
-          </div>
-        </div>
-      </div>
-      <div v-for="event in events" :key="event.id" class="flex flex-col gap-6 pt-10 xl:flex-row">
-        <div v-if="event.id === 1" class="xl:w-1/2">
-          <div
-            class="h-[300px] md:h-[500px] xl:h-[400px] w-full overflow-hidden rounded-3xl"
-          >
-            <img
-              class="h-full w-full object-cover"
-              :src="`${event.img}`"
-              :alt="`${event.title}`"
-            />
-          </div>
-          <div class="flex flex-col gap-2">
-            <div class="date mt-6">{{ event.date }}</div>
-            <div class="event-title">{{ event.title }}</div>
-            <div class="event-info">
-              {{ event.description }}
-            </div>
-          </div>
-        </div>
-        <div v-if="event.id !== 1" class="flex flex-col gap-6 xl:w-1/2">
-          <div class="flex">
-            <div
-              class="h-[150px] w-[300px] md:h-[120px] xl:h-[134px] xl:w-[301px] overflow-hidden rounded-3xl"
-            >
-              <img
-                class="h-full w-full object-cover"
-                :src="`${event.img}`"
-                :alt="`${event.title}`"
-              />
-            </div>
-            <div class="flex flex-col gap-2 ml-4 w-full">
-              <div class="date">{{ event.date }}</div>
-              <div class="event-title text-lg">
-                {{ event.title }}
-              </div>
-              <div class="event-info">
-                {{ event.description }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Event />
+  </div>
+  <!-- 政策議題 -->
+  <div class="advocate-wrap bg-theme-1 wrap">
+    <Issues />
+  </div>
+  <!-- 捐款及聯絡信箱 -->
+  <div class="advocate-wrap bg-theme-1 wrap">
+    <Other />
+  </div>
+  <!-- footer -->
+  <div class="advocate-wrap bg-theme-2 py-16">
+    <Footer />
   </div>
 </template>
-
 
 <style scoped>
 /* .marquee-text {
