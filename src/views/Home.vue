@@ -3,6 +3,9 @@ import Event from '@/components/Event.vue';
 import Issues from '@/components/Issues.vue';
 import Other from '@/components/Other.vue';
 import Footer from '@/components/Footer.vue';
+import Advocate from '@/components/Advocate.vue';
+
+import { ref } from 'vue';
 </script>
 <template>
   <!-- 首屏 候選人slogan、照片 -->
@@ -28,13 +31,28 @@ import Footer from '@/components/Footer.vue';
         Miao Li-Han
       </div>
     </div>
-    <div class="flex xl:w-1/2">
+    <div class="flex relative xl:w-1/2">
+      <!-- 手機版社群連結 -->
+      <div
+        class="bg-white w-52 rounded-3xl flex p-5 items-center justify-around absolute bottom-20 left-1/2 transform -translate-x-1/2 translate-y-1/2 lg:hidden"
+      >
+        <a class="pr-5" href="##">
+          <img src="../assets/icon/fb.svg" alt="FB" />
+        </a>
+        <a class="pr-5" href="##">
+          <img src="../assets/icon/ig.svg" alt="IG" />
+        </a>
+        <a href="##">
+          <img src="../assets/icon/yt.svg" alt="YT" />
+        </a>
+      </div>
       <img
-        class="h-full w-full object-cover"
+        class="h-full w-full object-cover "
         src="@/assets/image/main.png"
         alt="候選人"
       />
     </div>
+    <!-- 跑馬燈 -->
     <div
       class="marquee-wrap p-2 bg-theme-4 w-full overflow-hidden whitespace-nowrap"
     >
@@ -44,58 +62,23 @@ import Footer from '@/components/Footer.vue';
     </div>
   </div>
   <!-- 候選人主張 -->
-  <div class="advocate-wrap bg-theme-2 wrap">
-    <div
-      class="advocate-content bg-white flex flex-col overflow-hidden rounded-3xl xl:flex-row"
-    >
-      <div
-        class="advocate-text flex flex-col px-6 py-10 xl:w-1/2 xl:px-12 xl:py-10"
-      >
-        <div class="text-center">
-          <span class="rounded-lg bg-slate-700 text-white font-bold p-3"
-            >ADVOCATE</span
-          >
-          <div class="title-gradient font-ManTouSans m-10 text-5xl xl:text-7xl">
-            候選人主張
-          </div>
-        </div>
-
-        <div class="font-bold text-3xl text-slate-700 leading-normal">
-          我堅信 ! 藉由推動更完善的
-          <span class="primary-theme-1">貓咪福利</span>
-          和相關政策，更是間接地投資於<span class="primary-theme-1"
-            >台灣的未來</span
-          >。
-        </div>
-        <p class="text-slate-700 text-xl mt-10 leading-normal">
-          畢竟，民眾的身心健康與工作熱情是推動經濟的核心動力。透過完善的貓咪福利政策，為台灣的
-          GDP 經濟帶來巨大效益。
-          因此，我期望能在立法院內推進這些政策，確保每一隻貓咪都能得到他們應有的照顧，同時也為台灣的經濟發展助一臂之力。讓我們一同護航台灣的幸福經濟，從照顧每一隻貓咪開始。
-        </p>
-      </div>
-      <div class="xl:w-1/2">
-        <img
-          class="h-full w-full object-cover"
-          src="@/assets/image/advocate.png"
-          alt=""
-        />
-      </div>
-    </div>
+  <div id="advocate-wrap" class="bg-theme-2 wrap">
+    <Advocate />
   </div>
   <!-- 最新活動 -->
-  <div class="events-wrap wrap">
+  <div id="events-wrap" class="events-wrap wrap">
     <Event />
   </div>
   <!-- 政策議題 -->
-  <div class="advocate-wrap bg-theme-1 wrap">
+  <div id="issues-wrap" class="bg-theme-1 wrap">
     <Issues />
   </div>
   <!-- 捐款及聯絡信箱 -->
-  <div class="advocate-wrap bg-theme-1 wrap">
+  <div id="other-wrap" class="bg-theme-1 wrap">
     <Other />
   </div>
   <!-- footer -->
-  <div class="advocate-wrap bg-theme-2 py-16">
+  <div class="bg-theme-2 py-16">
     <Footer />
   </div>
 </template>

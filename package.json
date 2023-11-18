@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.16",
     "animate.css": "^4.1.1",
     "aos": "^3.0.0-beta.6",
     "vue": "^3.3.4",

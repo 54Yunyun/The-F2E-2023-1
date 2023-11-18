@@ -44,4 +44,26 @@
     font-weight: 400;
     color: #334155;
   }
+  .button {
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    max-width: 152px;
+    max-height: 64px;
+    padding: 16px;
+    gap: 8px;
+    color: #334155;
+    background-color: white;
+  }
+  .button:hover {
+    background-color: #f1f5f9;
+  }
+  .nav-wrap ul li:hover {
+    color:  #da7d4a;
+    font-weight: bold;
+  }
+  .active{
+    color:  #da7d4a;
+    font-weight: bold;
+  }
 }
