@@ -38,12 +38,12 @@ const closeModal = () => {
     <div v-for="event in events" :key="event.id" class="">
       <div v-if="event.id === 1" class="pr-6 pb-6">
         <div
-          @click="openModal(event, '最新活動')"
+          @click="openModal(event, 'event')"
           class="h-[300px] md:h-[500px] xl:h-[400px] w-full overflow-hidden rounded-3xl"
         >
           <img
             class="h-full w-full object-cover"
-            :src="`${event.img}`"
+            :src="`src/assets/image/event${event.id}.png`"
             :alt="`${event.title}`"
           />
         </div>
@@ -60,12 +60,12 @@ const closeModal = () => {
           <div class="flex flex-col">
             <div class="flex flex-row">
               <div
-                @click="openModal(event, '最新活動')"
+                @click="openModal(event, 'event')"
                 class="h-[150px] w-[300px] md:h-[120px] xl:h-[134px] xl:w-[301px] overflow-hidden rounded-3xl"
               >
                 <img
                   class="h-full w-full object-cover"
-                  :src="`${event.img}`"
+                  :src="`src/assets/image/event${event.id}.png`"
                   :alt="`${event.title}`"
                 />
               </div>

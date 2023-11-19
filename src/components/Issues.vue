@@ -18,7 +18,7 @@ import { issues } from '@/constants/issues.js';
           {{ issue.title }}
         </div>
         <div class="overflow-hidden w-full">
-          <img class="object-cover rounded-3xl" :src="`${issue.img}`" alt="" />
+          <img class="object-cover rounded-3xl" :src="`src/assets/image/issue${issue.id}.png`" alt="" />
         </div>
       </div>
     </div>

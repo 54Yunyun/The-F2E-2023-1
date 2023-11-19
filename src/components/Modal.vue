@@ -26,7 +26,7 @@ const closeModal = () => {
       <div class="overflow-y-auto py-6 px-10 max-h-[80vh]">
         <div class="flex w-full justify-between items-center mb-6">
           <div class="text-slate-700 font-bold text-2xl lg:text-3xl">
-            {{ sourceComponent }}
+            {{ sourceComponent === 'event' ? '最新活動' : '政策議題' }}
           </div>
           <img
             @click="closeModal"
@@ -42,7 +42,7 @@ const closeModal = () => {
             <div class="overflow-hidden rounded-3xl">
               <img
                 class="h-full w-full object-cover"
-                :src="`${sourceData.img}`"
+                :src="`src/assets/image/${sourceComponent}${sourceData.id}.png`"
                 :alt="`${sourceData.title}`"
               />
             </div>

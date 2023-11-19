@@ -2,7 +2,6 @@
 const events = [
   {
     id: 1,
-    img: '/src/assets/image/event1.png',
     date: '2023/12/26',
     title: '參與台北寵物論壇，爭取貓咪友善環境',
     description:
@@ -10,7 +9,6 @@ const events = [
   },
   {
     id: 2,
-    img: '/src/assets/image/event2.png',
     date: '2023/12/24',
     title: '掃街模式開啟！帶著你的貓耳，來和我一起走！',
     description:
@@ -18,7 +16,6 @@ const events = [
   },
   {
     id: 3,
-    img: '/src/assets/image/event3.png',
     date: '2023/12/20',
     title: '收容所模特兒大比拼！',
     description:
