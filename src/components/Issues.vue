@@ -1,5 +1,6 @@
 <script setup>
 import { issues } from '@/constants/issues.js';
+
 </script>
 <template>
   <div class="events-text flex justify-center">
@@ -12,14 +13,19 @@ import { issues } from '@/constants/issues.js';
       </div>
     </div>
   </div>
-    <div class="w-full grid lg:grid-cols-3 md:grid-cols-2">
-      <div v-for="issue in issues" :key="issue.id" class="mx-6">
-        <div class="components-title h-16 flex items-center ml-5">
-          {{ issue.title }}
-        </div>
-        <div class="overflow-hidden w-full">
-          <img class="object-cover rounded-3xl" :src="`src/assets/image/issue${issue.id}.png`" alt="" />
-        </div>
+  <div class="w-full grid lg:grid-cols-3 md:grid-cols-2">
+    <div v-for="issue in issues" :key="issue.id" class="mx-6">
+      <div class="components-title h-16 flex items-center ml-5">
+        {{ issue.title }}
+      </div>
+      <div class="overflow-hidden w-full">
+        <img
+        @click="openModal(event, 'event')"
+          class="object-cover cursor-pointer rounded-3xl hover-animation"
+          :src="`src/assets/image/issue${issue.id}.png`"
+          alt=""
+        />
       </div>
     </div>
+  </div>
 </template>

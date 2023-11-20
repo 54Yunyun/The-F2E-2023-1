@@ -35,7 +35,6 @@ const goAnchor = (selector, section) => {
         <ul class="flex h-full items-center">
           <li
             class="pr-5 text-primary"
-            :class="{ active: activeSection === 'advocate-wrap' }"
           >
             <div
               class="cursor-pointer"
@@ -46,7 +45,6 @@ const goAnchor = (selector, section) => {
           </li>
           <li
             class="pr-5 text-primary"
-            :class="{ active: activeSection === 'events-wrap' }"
           >
             <div
               class="cursor-pointer"
@@ -57,7 +55,6 @@ const goAnchor = (selector, section) => {
           </li>
           <li
             class="pr-5 text-primary"
-            :class="{ active: activeSection === 'issues-wrap' }"
           >
             <div
               class="cursor-pointer"
@@ -68,7 +65,6 @@ const goAnchor = (selector, section) => {
           </li>
           <li
             class="pr-5 text-primary"
-            :class="{ active: activeSection === 'other-wrap-donate' }"
           >
             <div
               class="cursor-pointer"
@@ -79,7 +75,6 @@ const goAnchor = (selector, section) => {
           </li>
           <li
             class="text-primary"
-            :class="{ active: activeSection === 'other-wrap-mail' }"
           >
             <div
               class="cursor-pointer"

@@ -1,4 +1,21 @@
+<script setup>
+import { ref } from 'vue';
+import OtherModal from '@/components/OtherModal.vue';
+const isOpen = ref(false);
+const openModal = () => {
+  isOpen.value = true;
+};
+
+const closeModal = () => {
+  isOpen.value = false;
+};
+</script>
 <template>
+  <OtherModal
+    :isOpen="isOpen"
+    @closeModal="closeModal"
+    @openModal="openModal"
+  />
   <div
     class="flex flex-col gap-4 items-center justify-between lg:flex-row lg:items-stretch mx-6 my-2"
   >
@@ -17,8 +34,8 @@
 
       <div class="flex flex-col my-4 gap-4 max-h-32 lg:flex-row items-center justify-between">
         <div>
-          <button class="button">
-            <div class="flex gap-4 justify-center items-center">
+          <button class="button" @click="openModal()">
+            <div class="flex gap-4 justify-center items-center" >
               <span>小額捐款 </span>
               <img src="../assets/icon/arrow.svg" alt="arrow" />
             </div>

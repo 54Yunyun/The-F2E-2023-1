@@ -58,12 +58,11 @@
   .button:hover {
     background-color: #f1f5f9;
   }
-  .nav-wrap ul li:hover {
-    color:  #da7d4a;
-    font-weight: bold;
+  .hover-animation {
+    transition: transform 0.5s ease-in-out;
   }
-  .active{
-    color:  #da7d4a;
-    font-weight: bold;
+  
+  .hover-animation:hover {
+    transform: scale(1.1);
   }
 }
