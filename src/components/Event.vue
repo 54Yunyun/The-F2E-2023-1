@@ -3,6 +3,7 @@ import { events } from '@/constants/events.js';
 import Modal from '@/components/Modal.vue';
 import { ref } from 'vue';
 
+
 const isOpen = ref(false);
 const sourceData = ref({});
 const sourceComponent = ref('');
@@ -42,7 +43,7 @@ const closeModal = () => {
         >
           <img
             class="h-full w-full object-cover hover-animation"
-            :src="`src/assets/image/event${event.id}.png`"
+            :src="asset(`event${event.id}.png`)"
             :alt="`${event.title}`"
           />
         </div>
@@ -64,7 +65,7 @@ const closeModal = () => {
               >
                 <img
                   class="h-full w-full object-cover hover-animation"
-                  :src="`src/assets/image/event${event.id}.png`"
+                  :src="asset(`event${event.id}.png`)"
                   :alt="`${event.title}`"
                 />
               </div>

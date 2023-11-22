@@ -22,7 +22,7 @@ import { issues } from '@/constants/issues.js';
         <img
         @click="openModal(event, 'event')"
           class="object-cover cursor-pointer rounded-3xl hover-animation"
-          :src="`src/assets/image/issue${issue.id}.png`"
+          :src="asset(`issue${issue.id}.png`)"
           alt=""
         />
       </div>
