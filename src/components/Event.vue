@@ -43,7 +43,7 @@ const closeModal = () => {
         >
           <img
             class="h-full w-full object-cover hover-animation"
-            :src="asset(`event${event.id}.png`)"
+            :src="`${event.img}`"
             :alt="`${event.title}`"
           />
         </div>
@@ -65,7 +65,7 @@ const closeModal = () => {
               >
                 <img
                   class="h-full w-full object-cover hover-animation"
-                  :src="asset(`event${event.id}.png`)"
+                  :src="`${event.img}`"
                   :alt="`${event.title}`"
                 />
               </div>
