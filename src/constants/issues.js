@@ -1,7 +1,6 @@
 import issue1 from '@/assets/image/issue1.png'
 import issue2 from '@/assets/image/issue2.png'
 import issue3 from '@/assets/image/issue3.png'
-import issue4 from '@/assets/image/issue4.png'
 
 const issues = [
   {
